@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
 .open {
 width: 900px;
 	max-width: 1080px;
@@ -11,10 +13,9 @@ width: 900px;
     padding-top: 50px;
     clear: both;}
 
-       .w3-content .w3-display-container2 {
+.w3-display-container2 {
     	display:none;
-    }
-
+    	padding-top:80px;}
 
 .bk-list {
 	list-style: none;
@@ -23,7 +24,7 @@ width: 900px;
 
 .bk-list li {
 	position: relative;
-	width: 300px;
+	width: 375px;
 	float: left;
 	z-index: 1;
 	margin: 0px 40px 80px 0;
@@ -45,7 +46,7 @@ width: 900px;
 	padding: 25px 0 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid rgba(0,0,0,0.3);
-	font-size: 26px;
+	font-size: 24px;
 	clear: both;
 }
 
@@ -55,7 +56,7 @@ width: 900px;
 }
 
 .bk-info h3 span:first-child {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 400;
 	text-transform: uppercase;
 	padding-top: 20px;
@@ -138,7 +139,8 @@ width: 900px;
 }
 
 .bk-list li .bk-book.bk-bookdefault:hover {
-	opacity: .8;
+	-webkit-transform: rotate3d(0,1,0,35deg);
+	transform: rotate3d(0,1,0,35deg);
 
 }
 
@@ -172,7 +174,7 @@ width: 900px;
 	-webkit-transform: translate3d(0,0,19px);
 	transform: translate3d(0,0,19px);
 	display: none;
-	width: 295px;
+	width: 330px;
 	height: 450px;
 	top: 5px;
 	-webkit-backface-visibility: hidden;
@@ -183,7 +185,7 @@ width: 900px;
 .bk-list li .bk-front,
 .bk-list li .bk-back,
 .bk-list li .bk-front > div {
-	width: 300px;
+	width: 330px;
 	height: 450px;
 }
 
@@ -195,7 +197,7 @@ width: 900px;
 
 .bk-list li .bk-top,
 .bk-list li .bk-bottom {
-	width: 295px;
+	width: 330px;
 	height: 40px;
 	top: -15px;
 	-webkit-backface-visibility: hidden;
@@ -318,7 +320,8 @@ width: 900px;
 
 
 
-.book-1 .bk-left {		
+.book-1 .bk-left {
+		background-image: url(../images/classics/hauntingspine.jpg);		
 		background-repeat: no-repeat;
 		background-position: 98% 98%;
 }
@@ -334,14 +337,15 @@ width: 900px;
 }
 
 .book-2 .bk-cover {
-	background-image: url(../images/classics/haunting.jpg);	
+	background-image: url(../images/classics/velveteen.jpg);	
 	background-repeat: no-repeat;
-	background-position: 98% 98%;
+	background-position: 100% 100%;
 }
 
-.book-2 .bk-left {	
+.book-2 .bk-left {
+		background-image: url(../images/classics/velveteenspine.jpg);		
 		background-repeat: no-repeat;
-		background-position: 98% 98%;
+		background-position: 100% 100%;
 }
 
 
@@ -355,12 +359,278 @@ width: 900px;
 }
 
 .book-3 .bk-cover {
-	background-image: url(../images/classics/haunting.jpg);	
+	background-image: url(../images/classics/12years.jpg);	
 	background-repeat: no-repeat;
 	background-position: 98% 98%;
 }
 
 .book-3 .bk-left {
+		background-image: url(../images/classics/12yearspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 4 */
+
+.book-4 .bk-front > div,
+.book-4 .bk-back,
+.book-4 .bk-left,
+.book-4 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-4 .bk-cover {
+	background-image: url(../images/classics/swordstone.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-4 .bk-left {
+		background-image: url(../images/classics/swordstonespine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+
+/* Book 5 */
+
+.book-5 .bk-front > div,
+.book-5 .bk-back,
+.book-5 .bk-left,
+.book-5 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-5 .bk-cover {
+	background-image: url(../images/classics/forwhom.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-5 .bk-left {
+		background-image: url(../images/classics/forwhomspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+
+/* Book 6 */
+
+.book-6 .bk-front > div,
+.book-6 .bk-back,
+.book-6 .bk-left,
+.book-6 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-6 .bk-cover {
+	background-image: url(../images/classics/abelard.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-6 .bk-left {
+		background-image: url(../images/classics/abelardspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+
+/* Book 7 */
+
+.book-7 .bk-front > div,
+.book-7 .bk-back,
+.book-7 .bk-left,
+.book-7 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-7 .bk-cover {
+	background-image: url(../images/classics/franken.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-7 .bk-left {
+		background-image: url(../images/classics/frankenspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+
+/* Book 8 */
+
+.book-8 .bk-front > div,
+.book-8 .bk-back,
+.book-8 .bk-left,
+.book-8 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-8 .bk-cover {
+	background-image: url(../images/classics/itcant.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-8 .bk-left {
+		background-image: url(../images/classics/itcantspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+
+/* Book 9 */
+
+.book-9 .bk-front > div,
+.book-9 .bk-back,
+.book-9 .bk-left,
+.book-9 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-9 .bk-cover {
+	background-image: url(../images/classics/turnofthescrew.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-9 .bk-left {
+		background-image: url(../images/classics/turnofthescrewspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 10 */
+
+.book-10 .bk-front > div,
+.book-10 .bk-back,
+.book-10 .bk-left,
+.book-10 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-10 .bk-cover {
+	background-image: url(../images/classics/junglebook.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-10 .bk-left {
+		background-image: url(../images/classics/junglebookspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 11 */
+
+.book-11 .bk-front > div,
+.book-11 .bk-back,
+.book-11 .bk-left,
+.book-11 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-11 .bk-cover {
+	background-image: url(../images/classics/toklas.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-11 .bk-left {
+		background-image: url(../images/classics/toklasspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 12 */
+
+.book-12 .bk-front > div,
+.book-12 .bk-back,
+.book-12 .bk-left,
+.book-12 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-12 .bk-cover {
+	background-image: url(../images/classics/queenofair.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-12 .bk-left {
+		background-image: url(../images/classics/queenofairspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 13 */
+
+.book-13 .bk-front > div,
+.book-13 .bk-back,
+.book-13 .bk-left,
+.book-13 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-13 .bk-cover {
+	background-image: url(../images/classics/theviolent.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-13 .bk-left {
+		background-image: url(../images/classics/violentbearspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 14 */
+
+.book-14 .bk-front > div,
+.book-14 .bk-back,
+.book-14 .bk-left,
+.book-14 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-14 .bk-cover {
+	background-image: url(../images/classics/descent.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+} 
+
+.book-14 .bk-left {
+		background-image: url(../images/classics/descentspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 15 */
+
+.book-15 .bk-front > div,
+.book-15 .bk-back,
+.book-15 .bk-left,
+.book-15 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-15 .bk-cover {
+	background-image: url(../images/classics/halfsisters.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-15 .bk-left {
+		background-image: url(../images/classics/halfsistersspine.jpg);		
+		background-repeat: no-repeat;
+		background-position: 98% 98%;
+}
+/* Book 16 */
+
+.book-16 .bk-front > div,
+.book-16 .bk-back,
+.book-16 .bk-left,
+.book-16 .bk-front:after {
+	background-color: #fff;
+}
+
+.book-16 .bk-cover {
+	background-image: url(../images/classics/theworm.jpg);	
+	background-repeat: no-repeat;
+	background-position: 98% 98%;
+}
+
+.book-16 .bk-left {
+		background-image: url(../images/classics/thewormspine.jpg);		
 		background-repeat: no-repeat;
 		background-position: 98% 98%;
 }
@@ -448,8 +718,8 @@ header {
 
 header > h1 
 
-{	font-family: 'Merriweather', serif;
-	font-size: 100px;
+{	font-family: 'Lora', serif;
+	font-size: 95px;
 	letter-spacing: 4px;
 	margin-bottom: -25px;
 	margin-top: 60px;
@@ -510,7 +780,7 @@ a {
 }
 
 .main	{
-	width: 90%;
+	width: 880px;
 	max-width: 1080px;
 	margin: 0 auto;
 	position: fixed
@@ -544,8 +814,8 @@ header > p
 	background-color: yellow;
 	margin-left: -4px;
 	padding: 8px;
-	padding-left:24px;
-	padding-right:24px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .nav_links li:hover {
@@ -559,7 +829,7 @@ background-color: lightyellow;
 .navbar-fixed {
     top: 0;
   position: fixed;
-  width: 100%;
+  width: 980px;
     z-index:9999;
     opacity:0;
     -webkit-transition:opacity 1s ease-in-out;
@@ -713,7 +983,8 @@ ul.social-icons {
 .social-icons .fa-windows{background-color:black;}
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:black;} 
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:black;}
-
+.social-icons .fa-reddit-alien{background-color:black;}
+.social-icons .fa-reddit-alien:hover{background-color:#FF5700;} 
 .social-icons .fa-adn:hover{background-color:#504e54;} 
 .social-icons .fa-apple:hover{background-color:#aeb5c5;} 
 .social-icons .fa-android:hover{background-color:#A5C63B;}  
@@ -867,5 +1138,184 @@ footer:hover {
 }
 
 .container {padding-top:80px;}
+
+@media only screen and (max-width: 1192px) {
+
+	ul.social-icons {
+	margin-top:0px;
+	margin-left: -80px;}
+
+.navbar-fixed {
+  width: 980px;
+}
+
+    .social-icons .fa {
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+		padding-right: 5px;
+	padding-left: 40px;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+}
+.main {
+	width: 450px;
+	padding-left: 3%;
+}
+
+.open {
+	width: 300px;
+}
+
+.peat {
+	padding-bottom:30px;
+
+}
+
+@media only screen and (max-width: 980px) {
+
+
+.navbar-fixed {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+.main {
+	width: 450px;
+	padding-left: 3%;
+}
+
+.open {
+	width: 300px;
+	padding-bottom: 200px;
+}
+
+
+   .w3-content .w3-display-container {
+    	padding-top:50px;
+    }
+
+.w3-display-middle{
+	margin-top: 25px;
+}
+
+.w3-button {
+		margin-top: 25px;
+}
+.w32-button {
+		margin-top: 25px;
+}
+
+@media only screen and (max-width: 830px) {
+    
+    	ul.social-icons {
+	z-index: 1000;}
+
+    nav {
+    	
+    top: 0;
+  position: fixed;
+    width: 100%;
+    z-index:999;
+    opacity:1;
+    -webkit-transition:opacity 1s ease-in-out;
+    -moz-transition:opacity 1s ease-in-out;
+    -o-transition:opacity 1s ease-in-out;
+    -ms-transition:opacity 1s ease-in-out;
+    transition:opacity 1s ease-in-out;
+    }
+
+
+
+
+   @media only screen and (max-width: 700px) {
+    
+nav {
+	width: 400px;
+	position:absolute;
+ left:50%;
+  margin-left:-200px;
+}
+
+.navbar-fixed {
+  width: 400px;
+}
+.nav_links li {
+	width:150px;
+}
+
+
+
+
+   .w3-content .w3-display-container {
+    	padding-top:80px;
+    }
+
+.w3-display-middle{
+	margin-top: 40px;
+}
+
+.w3-button{
+	margin-top: 40px;
+}
+
+.w32-button{
+	margin-top: 40px;
+}
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 10em; min-width: 10em ; max-height: 10em; max-width: 10em;}
+.w3-blackbox > h1 {font-size: 5em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+.w3-blackbox > p {font-size: 14px; margin-top: 30px;}
+.words-1 span {font-size: 14px; margin-top: 12px;   margin-left: 0px;}
+
+#pp {
+ 	font-size: 70px;
+ 	padding-bottom: 25px;
+ 	padding-top: 20px;
+ 	padding-left: 8px;
+ }
+
+
+
+
+
+   @media only screen and (max-width: 500px) {
+    
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 8em; min-width: 8em ; max-height: 8em; max-width: 8em;}
+.w3-blackbox > h1 {font-size: 4em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+
+#pp {
+ 	font-size: 55px;
+ 	padding-bottom: 25px;
+ 	padding-top: 14px;
+ 	padding-left: 8px;
+ }
+
+
+.open {
+	padding-top: 40px;
+	padding-bottom: 500px;
+}
+
+   .w3-content .w3-display-container {
+    	display:none;
+    }
+
+          .w3-content .w3-display-container2 {
+    	display:block;
+    	padding-top:80px;
+    }
+}
+
+
+
+
 
 

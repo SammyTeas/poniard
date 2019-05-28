@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Poniard Press</title>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="favicon.ico"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" href="css/w3.css">
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+		<link href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
+		<link href="resources/photoswipe.css" type="text/css" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+		<script type="text/javascript" src="resources/klass.min.js"></script>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.12.1.min.js'></script>
+		<script type="text/javascript" src="js/strip.pkgd.min.js"></script>
+		<link href="css/strip.css" media="all" rel="stylesheet" type="text/css" >
+
+	<style>
+	#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%; /* centers the loading animation vertically on the screen */
+	background-image:url(images/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+.social-icons .fa-facebook{background-color:black;}
+.social-icons .fa-facebook:hover{background-color:#3C599F;} 
+
+.mainalt	{
+	width: 90%;
+	max-width: 850px;
+	margin: 0 auto;
+	position: fixed
+	padding: 0 100px 0px ;
+    padding-top: 110px;
+
+}
+
+</style>
+	<script>
+	$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 510) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < 511) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
+});</script>
+
+	<script>
+	$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 140) {
+      $('#socials').addClass('social-fixed');
+    }
+    if ($(window).scrollTop() < 141) {
+      $('#socials').removeClass('social-fixed');
+    }
+  });
+});
+
+
+</script>	
+
+
+
+
+	</head>
+
+	<div id="preloader">
+	<div id="status">&nbsp;</div>
+	</div>
+
+<div>
+	<div id='socials'>
+				<ul class="social-icons icon-circle icon-zoom" > 
+	      <li><a href="yoyo"><i class="fa fa-facebook"></i></a> </li> 
+	      <li><a href="#"><i class="fa fa-reddit-alien"></i></a> </li>   
+	      <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 
+	  	</ul>
+	</div>
+
+
+<div class="w3-content w3-display-container" id="toptop">
+
+<div class="w3-display-container" >
+  <img class="fading" src="images/banners/2.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+       <h1 style="padding-left:4px;">&thorn;&thorn;<br></h1>
+                    <p style="padding-right:6px; padding-top: 40px">poniard press</p>
+  </div>
+</div>
+
+<div class="w3-display-container2 " >
+  <img class="fading" src="images/banners/1.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+      <h1 style="padding-left:4px;">&thorn;&thorn;<br></h1>
+                    <p style="padding-right:6px; padding-top: 40px">classics</p>
+</div>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+$('.mySlides:visible').fadeOut(function() {
+   $(x[slideIndex-1]).fadeIn();
+});
+}
+</script>
+
+
+
+
+
+
+  <nav id='nav_bar'>
+    <ul class='nav_links'>
+      <li style="background-color:lightyellow"><a href="index.html" >Classics</a></li>
+      <li><a href="forthcoming.html">Forthcoming</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+</div>
+
+    </ul>
+
+
+  </nav>
+
+
+			
+
+	<body>
+
+
+
+
+		<div class="container">	
+			<!-- Codrops top bar -->
+
+			<div class="main" >
+				<ul class="bk-list">
+					<li>
+						<div class="fade">
+								<a href="resources/images/full/haunting1.jpg" class='strip thumbnail' data-strip-group="haunting">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+									<div class="bk-cover">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left">
+										</div>
+											<div class="bk-top">
+											</div>
+												<div class="bk-bottom">
+												</div>
+						</div>
+						</a>
+			<a href='resources/images/full/haunting2.jpg' class='strip thumbnail' data-strip-group="haunting"></a>
+			<a href='resources/images/full/haunting3.jpg' class='strip thumbnail' data-strip-group="haunting"></a>
+			<a href='resources/images/full/haunting4.jpg' class='strip thumbnail' data-strip-group="haunting"></a>
+						</div>
+
+
+
+		<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/Xtzmh" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/nMBxt" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/FnxSi" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+
+
+							<h3>
+
+								<span>Shirley Jackson</span>
+								<span>The Haunting of Hill House</span>
+							</h3>
+							<p>A perfect blurring of the line between the psychological and the supernatural.
+							</p>
+						</div>
+						
+					</li>
+					
+					<li>
+		<div>
+			<span id="gallery">
+			<a href="resources/images/full/velveteen1.jpg" class='strip thumbnail' data-strip-group="velveteen">
+				
+						<div class="bk-book book-2 bk-bookdefault">
+						<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+			</a>
+			<a href='resources/images/full/velveteen2.jpg' class='strip thumbnail' data-strip-group="velveteen"></a>
+			<a href='resources/images/full/velveteen3.jpg' class='strip thumbnail' data-strip-group="velveteen"></a>
+			<a href='resources/images/full/velveteen4.jpg' class='strip thumbnail' data-strip-group="velveteen"></a>
+			<a href='resources/images/full/velveteen5.jpg' class='strip thumbnail' data-strip-group="velveteen"></a>
+						</span>
+						</div>
+		
+							<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/tvlBF" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/mvGBw" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/zXobA" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+                     
+								
+							<h3>
+								<span>Margery Williams</span>
+								<span>The Velveteen Rabbit</span>
+							</h3>
+							<p>A Christmas classic. A sickly boy and his favourite toy will teach you what it means to love and be loved in return.</p>
+
+						</div>
+					</li>
+					<li>
+						<span id="gallery">
+			<a href="resources/images/full/12y1.jpg" class='strip thumbnail' data-strip-group="12years">
+				
+						<div class="bk-book book-3 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+	
+			<a href="resources/images/full/12y2.jpg" class='strip thumbnail' data-strip-group="12years">
+			<a href="resources/images/full/12y3.jpg" class='strip thumbnail' data-strip-group="12years">
+			<a href="resources/images/full/12y4.jpg" class='strip thumbnail' data-strip-group="12years">
+			<a href="resources/images/full/12y5.jpg" class='strip thumbnail' data-strip-group="12years">
+
+</a>
+								<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/jmkgG" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/ATCjj" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/ZXCaOW" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+<h3>
+								<span>Solomon Northup</span>
+								<span>12 Years a Slave</span>
+							</h3>
+							<p>Solomon Northup’s account of his abduction and slavery in the Deep South. This edition includes affidavits written by those who knew Solomon and the legal document that was signed preceeding his release.</p>
+						</div>
+					</li>
+					<li>
+					<div>
+											<span id="gallery">
+			<a href="resources/images/full/swordstone1.jpg" class='strip thumbnail' data-strip-group="swordstone">
+						<div class="bk-book book-4 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+						
+			<a href="resources/images/full/swordstone2.jpg" class='strip thumbnail' data-strip-group="swordstone">
+			<a href="resources/images/full/swordstone3.jpg" class='strip thumbnail' data-strip-group="swordstone">
+			<a href="resources/images/full/swordstone4.jpg" class='strip thumbnail' data-strip-group="swordstone">
+			</a>
+						</span>
+						</div>
+
+
+									<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/MwadS" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/CHtdl" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/QCGPp" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+				
+							<h3>
+
+								<span>T.H. White</span>
+								<span>The Sword in the Stone</span>
+							</h3>
+							<p>The famous Arthurian tale. Meet Arthur before he was Arthur. Meet “Wart”. And Merlyn. And Robin Hood. And many others in this colourful and hilarious romp through history. Book 1 of 4.</p>
+						</div>
+						
+					</li>
+					<li>
+		<div>
+			<span id="gallery">
+			<a href="resources/images/full/forwhom1.jpg" class='strip thumbnail' data-strip-group="forwhom">
+				
+						<div class="bk-book book-5 bk-bookdefault">
+						<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+			
+		<a href="resources/images/full/forwhom2.jpg" class='strip thumbnail' data-strip-group="forwhom">
+		<a href="resources/images/full/forwhom3.jpg" class='strip thumbnail' data-strip-group="forwhom">
+		<a href="resources/images/full/forwhom4.jpg" class='strip thumbnail' data-strip-group="forwhom">
+		<a href="resources/images/full/forwhom5.jpg" class='strip thumbnail' data-strip-group="forwhom">
+</a>
+						</span>
+						</div>
+		
+										<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/Gsair" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/gbfft" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/AsjMq" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+
+
+				
+							<h3>
+								<span>Ernest Hemingway</span>
+								<span>For Whom the Bell Tolls</span>
+							</h3>
+							<p>A young demolitionist is sent to work with a guerrilla unit in the Spanish Civil War. Hemingway proves that he <em>knows</em> people. The good ones. The drunkards. The fortune-tellers. The cowards. He knows them all.</p>
+
+						</div>
+					</li>
+					<li>
+						<span id="gallery">
+			<a href="resources/images/full/abelard1.jpg" class='strip thumbnail' data-strip-group="abelard">
+				
+						<div class="bk-book book-6 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+	
+			<a href="resources/images/full/abelard2.jpg" class='strip thumbnail' data-strip-group="abelard">
+			<a href="resources/images/full/abelard3.jpg" class='strip thumbnail' data-strip-group="abelard">
+			<a href="resources/images/full/abelard4.jpg" class='strip thumbnail' data-strip-group="abelard">
+			<a href="resources/images/full/abelard5.jpg" class='strip thumbnail' data-strip-group="abelard">
+
+				</a>	
+							<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/GhTmv" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/oHJZI" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/GAPsh" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+							<h3>
+								<span>Trans. John Hughes</span>
+								<span>The Love Letters of Abelard and Heloise</span>
+							</h3>
+							<p>The endless abnegation of two once-bound souls. With a poem by Alexander Pope.</p>
+						</div>
+					</li>
+					<li>
+					<div>
+											<span id="gallery">
+			<a href="resources/images/full/frank1.jpg" class='strip thumbnail' data-strip-group="frankenstein">
+						<div class="bk-book book-7 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+						
+			<a href="resources/images/full/frank2.jpg" class='strip thumbnail' data-strip-group="frankenstein">
+			<a href="resources/images/full/frank3.jpg" class='strip thumbnail' data-strip-group="frankenstein">
+			<a href="resources/images/full/frank4.jpg" class='strip thumbnail' data-strip-group="frankenstein">
+			<a href="resources/images/full/frank5.jpg" class='strip thumbnail' data-strip-group="frankenstein">
+			</a>
+						</span>
+						</div>
+
+
+
+
+												<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/edAPs" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/HgytQ" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/RIIgh" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+							<h3>
+
+								<span>Mary Shelley</span>
+								<span>Frankenstein</span>
+							</h3>
+							<p>Fall in love with the monster like I did.</p>
+						</div>
+						
+					</li>
+					<li>
+		<div>
+											<span id="gallery">
+			<a href="resources/images/full/itcant1.jpg" class='strip thumbnail' data-strip-group="itcant">
+				
+						<div class="bk-book book-8 bk-bookdefault">
+						<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+
+			</a>
+						</span>
+						</div>
+		
+										<div class="bk-info">
+					<div class=buttons><a href="https://gum.co/QWuCH" class="a-btn">
+	<span></span>
+	<span><i class="fa fa-cloud-download" style="font-size:28px; padding-top:2px; padding-left:5px "></i> <br>Digital</span>
+	<span  style="font-size:14px; line-height:15px;">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/RCDH" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-book" style="font-size:28px; padding-top:2px; "></i> <br>Hardcover</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+
+<a href="https://gum.co/FvflS" class="a-btn" style="width: 80px">
+	<span></span>
+	<span style="width: 80px"><i class="fa fa-sticky-note-o" style="font-size:28px; padding-top:2px; "></i> <br>Notebook</span>
+	<span  style="font-size:14px; line-height:15px; padding-left:10px">Fall <br>2019</span>
+</a>
+</div>
+							<h3>
+								<span>Lewis Sinclair</span>
+								<span>It Can't Happen Here</span>
+							</h3>
+							<p>Fascism in America? It can't happen here.</p>
+
+						</div>
+					</li>
+					</div>
+
+
+
+
+		
+		</div><!-- /container -->
+
+<div class="scrolltop" onclick="yoyo()">
+		<footer id="footer">
+Back to top
+</div>
+</footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/books1.js"></script>
+		<script>
+			$(function() {
+
+				Books.init();
+
+			});
+		</script>
+
+		<script>
+		var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.scrollY >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').delay(500).fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(800).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(800).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
+
+<script>
+function yoyo() {
+   $('html, body').animate({ scrollTop: 0 }, 'fast');
+      
+
+}
+</script>
+
+
+	</body>
+</html>

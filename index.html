@@ -23,7 +23,7 @@
 		<script type="text/javascript" src="js/strip.pkgd.min.js"></script>
 		<link href="css/strip.css" media="all" rel="stylesheet" type="text/css" >
 
-<style>
+	<style>
 .social-icons .fa-facebook{background-color:black;}
 .social-icons .fa-facebook:hover{background-color:#3C599F;} 
 
@@ -80,6 +80,10 @@
 
 	</head>
 
+	<div id="preloader">
+	<div id="status">&nbsp;</div>
+	</div>
+
 <div>
 	<div id='socials'>
 				<ul class="social-icons icon-circle icon-zoom" > 
@@ -108,6 +112,28 @@
 </div>
 
 </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+$('.mySlides:visible').fadeOut(function() {
+   $(x[slideIndex-1]).fadeIn();
+});
+}
+</script>
+
+
 
 
 

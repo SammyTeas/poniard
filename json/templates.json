@@ -1,9 +1,9 @@
 {
   "templates": [
-    { "id": "35", "title": "FOTO Finish–Red", "thumbnail": "files/img/fotoR.jpg", "image": "files/img/fotoR.jpg", "template": "files/json/fotoR.json", "tags": "foto" },
-    { "id": "34", "title": "FOTO Finish–Yellow", "thumbnail": "files/img/fotoY.jpg", "image": "files/img/fotoY.jpg", "template": "files/json/fotoY.json", "tags": "foto" },
-    { "id": "33", "title": "FOTO Finish–Green", "thumbnail": "files/img/fotoG.jpg", "image": "files/img/fotoG.jpg", "template": "files/json/fotoG.json", "tags": "foto" },
-    { "id": "32", "title": "FOTO Finish–Blue", "thumbnail": "files/img/fotoB.jpg", "image": "files/img/fotoB.jpg", "template": "files/json/fotoB.json", "tags": "foto" },
+    { "id": "35", "title": "FOTO Finish–Red", "thumbnail": "files/img/fotoR.jpg", "image": "files/img/fotoR.jpg", "template": "files/json/fotoR.json", "tags": "foto-big" },
+    { "id": "34", "title": "FOTO Finish–Yellow", "thumbnail": "files/img/fotoY.jpg", "image": "files/img/fotoY.jpg", "template": "files/json/fotoY.json", "tags": "foto-big" },
+    { "id": "33", "title": "FOTO Finish–Green", "thumbnail": "files/img/fotoG.jpg", "image": "files/img/fotoG.jpg", "template": "files/json/fotoG.json", "tags": "foto-big" },
+    { "id": "32", "title": "FOTO Finish–Blue", "thumbnail": "files/img/fotoB.jpg", "image": "files/img/fotoB.jpg", "template": "files/json/fotoB.json", "tags": "foto-big" },
     { "id": "31", "title": "FOTO Pocket–Red", "thumbnail": "files/img/fotoPr.jpg", "image": "files/img/fotoPr.jpg", "template": "files/json/fotoPr.json", "tags": "foto-pocket" },
     { "id": "30", "title": "FOTO Pocket–Yellow", "thumbnail": "files/img/fotoPy.jpg", "image": "files/img/fotoPy.jpg", "template": "files/json/fotoPy.json", "tags": "foto-pocket" },
     { "id": "29", "title": "FOTO Pocket–Green", "thumbnail": "files/img/fotoPg.jpg", "image": "files/img/fotoPg.jpg", "template": "files/json/fotoPg.json", "tags": "foto-pocket" },

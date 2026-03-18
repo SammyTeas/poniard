@@ -1478,7 +1478,7 @@
 
         /* TEMPLATE LIBRARY */
 
-        /* Template Search */
+  /* Template Search */
         selector.find('#palleon-template-search').on('click', function() {
             var category = selector.find('#palleon-templates-menu').val();
             var input = $(this).parent().find('input');
@@ -1519,15 +1519,11 @@
                         selector.find('#palleon-templates-grid-pagination').pagination('destroy');
                     }
                     if (category == 'all') {
-                        if (searchTerm != '' || searchTerm.length > 1) {
-                            selector.find('#palleon-templates-grid .grid-item').hide().filter('[data-keyword*="'+ searchTerm +'"]').show();
-                        }
+                        selector.find('#palleon-templates-grid .grid-item').hide().filter('[data-keyword*="'+ searchTerm +'"]').show();
+                    } else if (searchTerm != '' && searchTerm.length > 1) {
+                        selector.find('#palleon-templates-grid .grid-item').hide().filter('[data-keyword*="'+ searchTerm +'"]').filter('[data-category*="'+ category +'"]').show();
                     } else {
-                        if (searchTerm != '' || searchTerm.length > 1) {
-                            selector.find('#palleon-templates-grid .grid-item').hide().filter('[data-keyword*="'+ searchTerm +'"]').filter('[data-category*="'+ category +'"]').show();
-                        } else {
-                            selector.find('#palleon-templates-grid .grid-item').hide().filter('[data-category*="'+ category +'"]').show();
-                        }
+                        selector.find('#palleon-templates-grid .grid-item').hide().filter('[data-category*="'+ category +'"]').show();
                     }
                     if (selector.find('#palleon-templates-grid .grid-item:visible').length === 0) {
                         selector.find("#palleon-all-templates-noimg").removeClass('d-none');
@@ -1538,7 +1534,7 @@
             }
             
         });
-
+		
         /* Save Template */
         selector.find('#palleon-json-save').on('click', function() {
             var json = canvas.toJSON(JSON_defaults);

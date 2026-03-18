@@ -75,4 +75,11 @@
 
 $(document).on('select2:select', '#palleon-templates-menu', function() {
     $('#palleon-template-search').trigger('click');
+    // Re-enable everything after the filter runs
+    $('#palleon-template-search').removeClass('cancel danger').addClass('primary');
+    $('#palleon-template-search').find('.material-icons').html('search');
+    $('#palleon-templates-menu').prop('disabled', false);
+    $('#palleon-templates-menu').parent().find('span.select2-container').css('opacity', 1);
+    $('#palleon-templates-menu').next('.select2-container').css('opacity', 1);
+    $('input', $('#palleon-templates-menu').closest('.palleon-templates-menu-wrap')).prop('disabled', false).val('');
 });

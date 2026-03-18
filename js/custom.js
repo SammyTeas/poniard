@@ -72,3 +72,7 @@
     });
 
 })(jQuery);
+
+$(document).on('change', '#palleon-templates-menu', function() {
+    $('#palleon-template-search').trigger('click');
+});

@@ -56,22 +56,6 @@
             watermarkBackgroundColor: '#FFF', // Watermark background color
             watermarkLocation: 'bottom-right', // Possible values: "bottom-right", "bottom-left", "top-left" and "top-right".
             templatePreview: true, // true or false
-            defaultFonts: [
-                ["Helvetica Neue", "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"],
-                ["Impact", "Impact, Charcoal, sans-serif"],
-                ["Georgia", "Georgia, serif"],
-                ["Palatino Linotype", "'Palatino Linotype', 'Book Antiqua', Palatino, serif"],
-                ["Times New Roman", "'Times New Roman', Times, serif"],
-                ["Arial", "Arial, Helvetica, sans-serif"],
-                ["Arial Black", "'Arial Black', Gadget, sans-serif"],
-                ["Comic Sans", "'Comic Sans MS', cursive, sans-serif"],
-                ["Lucida Sans", "'Lucida Sans Unicode', 'Lucida Grande', sans-serif"],
-                ["Tahoma", "Tahoma, Geneva, sans-serif"],
-                ["Trebuchet", "'Trebuchet MS', Helvetica, sans-serif"],
-                ["Verdana", "Verdana, Geneva, sans-serif"],
-                ["Courier New", "'Courier New', Courier, monospace"],
-                ["Lucida Console", "'Lucida Console', Monaco, monospace"]
-            ], // the array of default fonts ["font-name", "font-family"]
 
             //////////////////////* CUSTOM FUNCTIONS *//////////////////////
 

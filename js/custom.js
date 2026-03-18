@@ -73,6 +73,6 @@
 
 })(jQuery);
 
-$(document).on('change', '#palleon-templates-menu', function() {
+$(document).on('select2:select', '#palleon-templates-menu', function() {
     $('#palleon-template-search').trigger('click');
 });

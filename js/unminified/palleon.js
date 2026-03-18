@@ -1480,7 +1480,7 @@
 
   /* Template Search */
         selector.find('#palleon-template-search').on('click', function() {
-            var category = selector.find('#palleon-templates-menu').val();
+            var category = selector.find('#palleon-templates-menu').find(':selected').val();
             var input = $(this).parent().find('input');
             selector.find("#palleon-all-templates-noimg").addClass('d-none');
             selector.find('#palleon-templates-grid .grid-item').each(function() {

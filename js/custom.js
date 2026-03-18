@@ -75,10 +75,12 @@
 
 $(document).on('select2:select', '#palleon-templates-menu', function() {
     $('#palleon-template-search').trigger('click');
-    var $wrap = $('#palleon-templates-menu').closest('.palleon-templates-menu-wrap');
-    $('#palleon-template-search').removeClass('cancel danger').addClass('primary');
-    $('#palleon-template-search').find('.material-icons').html('search');
-    $('#palleon-templates-menu').prop('disabled', false);
-    $wrap.find('.select2-container').css('opacity', 1);
-    $wrap.find('input').prop('disabled', false).val('');
+    setTimeout(function() {
+        var $wrap = $('#palleon-templates-menu').closest('.palleon-templates-menu-wrap');
+        $('#palleon-template-search').removeClass('cancel danger').addClass('primary');
+        $('#palleon-template-search').find('.material-icons').html('search');
+        $('#palleon-templates-menu').prop('disabled', false);
+        $wrap.find('.select2-container').css('opacity', 1);
+        $wrap.find('input').prop('disabled', false).val('');
+    }, 50);
 });

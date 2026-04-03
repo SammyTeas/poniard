@@ -2652,6 +2652,17 @@
     <script src="js/plugins.min.js"></script>
     <script src="js/palleon.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {
+                var undoBtn = document.getElementById('palleon-undo');
+                if (undoBtn && !undoBtn.disabled) {
+                    e.preventDefault();
+                    undoBtn.click();
+                }
+            }
+        });
+    </script>
     <!-- Scripts END -->
 </body>
 <!-- Body END -->

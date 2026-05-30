@@ -71,13 +71,29 @@
           "Extra_Deck",
           "Sub_Ruler",
           "Expel",
-          "Grid"
+          "Grid",
+          "SharedDeck",
+          "Market"
         ],
         "layout": {
           "direction": "column",
           "content": [
             {
               "section": "Grid"
+            },
+            {
+              "direction": "row",
+              "content": [
+                {
+                  "section": "SharedDeck",
+                  "style": {
+                    "width": "10vh"
+                  }
+                },
+                {
+                  "section": "Market"
+                }
+              ]
             },
             {
               "direction": "row",
@@ -350,6 +366,32 @@
             "enterSpun": false,
             "keepTappedNewTurn": false,
             "showHiddenCardInHistory": false
+          },
+          "SharedDeck": {
+            "title": "SharedDeck",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "DECK",
+            "isShared": true,
+            "displayedTitle": "Shared Deck",
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": false,
+            "noQuickActions": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Market": {
+            "title": "Market",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "isShared": true,
+            "displayedTitle": "Market",
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "noQuickActions": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": true
           },
           "Grid": {
             "type": "custom",

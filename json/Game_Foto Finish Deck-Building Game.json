@@ -1,0 +1,117 @@
+{
+  "name": "Foto Finish Deck-Building Game",
+  "menuBackgroundImage": "https://static.wixstatic.com/media/15bc5f_78c733240be443509b39d1a2748fa6bd~mv2.png/v1/fill/w_1905,h_753,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Foto_Hero.png",
+  "deckBuilding": {
+    "mainFilters": [],
+    "formats": [
+      {
+        "title": "Best of 1",
+        "gameplay": "Best of 1 ",
+        "compatibility": "Wanderer",
+        "customCategories": []
+      }
+    ]
+  },
+  "gameplay": {
+    "Best of 1": {
+      "mulligan": {
+        "info": "",
+        "startingHandSize": "6",
+        "putSelectionAtBottom": false
+      },
+      "newTurn": {
+        "drawOnStart": false,
+        "sharedTurn": false,
+        "drawPerTurn": "0"
+      },
+      "countersStartingValues": [
+        "140",
+        0
+      ],
+      "sections": {
+        "customSections": [
+          "Field",
+          "Ability"
+        ],
+        "layout": {
+          "direction": "column",
+          "content": [
+            {
+              "direction": "row",
+              "content": [
+                {
+                  "section": "Ruler",
+                  "style": {
+                    "width": "15vh"
+                  }
+                },
+                {
+                  "section": "Field"
+                }
+              ]
+            }
+          ],
+          "isSymetricalForOpponents": false
+        },
+        "categoriesAlreadyOnBoard": [
+          "Ruler"
+        ],
+        "autoPlayFromHand": {
+          "Card": "Field"
+        },
+        "autoPlayFromStack": {
+          "Resonator": "Field",
+          "Card": "Field"
+        },
+        "sectionsDict": {
+          "Field": {
+            "title": "Field",
+            "isHidden": "yes",
+            "height": "MEDIUM",
+            "alignment": "CENTER",
+            "isHorizontalAllowed": true,
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": true,
+            "showHiddenCardInHistory": false
+          },
+          "Ruler": {
+            "title": "Ruler",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "START",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Ruler",
+            "noQuickActions": true,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": true,
+            "showHiddenCardInHistory": false
+          }
+        }
+      },
+      "defaultNotes": "",
+      "tokens": [],
+      "hideFacedDownCards": false
+    }
+  },
+  "defaultRessources": {
+    "backgrounds": [
+      "https://poniardpress.ca//IMG/PaperMats_1.png"
+    ],
+    "decksUrl": "https://niebvelungen.github.io/TCG-Arena-FoW/decks.json"
+  },
+  "customHelp": "https://www.pangramgames.com/foto",
+  "cards": {
+    "dataUrl": "https://niebvelungen.github.io/TCG-Arena-FoW/cards_fow.json",
+    "cardBack": "https://fowsim.s3.amazonaws.com/static/img/pack/card_back.fd17635728de.png"
+  }
+}

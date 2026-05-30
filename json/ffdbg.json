@@ -532,7 +532,7 @@
                           "borderRadius": "0.5vh",
                           "left": "0",
                           "top": "0",
-                          "translate": "calc({{game.data.Grid.tokens[0].col}} * 8.5vh + 0.5vh) calc({{game.data.Grid.tokens[0].row}} * 16.5vh + 3vh)",
+                          "translate": "calc({{game.data.Grid.char0col}} * 8.5vh + 0.5vh) calc({{game.data.Grid.char0row}} * 16.5vh + 3vh)",
                           "transition": "all 0.3s ease-in-out"
                         },
                         "src": "https://poniardpress.ca//IMG/StartingCharacters_9.png"
@@ -548,7 +548,7 @@
                           "borderRadius": "0.5vh",
                           "left": "0",
                           "top": "0",
-                          "translate": "calc({{game.data.Grid.tokens[1].col}} * 8.5vh + 0.5vh) calc({{game.data.Grid.tokens[1].row}} * 16.5vh + 3vh)",
+                          "translate": "calc({{game.data.Grid.char1col}} * 8.5vh + 0.5vh) calc({{game.data.Grid.char1row}} * 16.5vh + 3vh)",
                           "transition": "all 0.3s ease-in-out"
                         },
                         "src": "https://poniardpress.ca//IMG/StartingCharacters_2.png"
@@ -559,19 +559,13 @@
               ]
             },
             "defaultValue": {
-              "tokens": [
-                {
-                  "col": 2,
-                  "row": 1
-                },
-                {
-                  "col": 4,
-                  "row": 1
-                }
-              ]
+              "char0col": 2,
+              "char0row": 1,
+              "char1col": 4,
+              "char1row": 1
             },
             "events": {
-              "onStart": "game.data.Grid.tokens = [{ col: 2, row: 1 }, { col: 4, row: 1 }]"
+              "onStart": "game.data.Grid.char0col = 2; game.data.Grid.char0row = 1; game.data.Grid.char1col = 4; game.data.Grid.char1row = 1;"
             }
           },
           "GridControls": {
@@ -603,8 +597,7 @@
                       "props": {
                         "className": "text-white",
                         "style": {
-                          "fontSize": "1.5vh",
-                          "marginBottom": "0.5vh"
+                          "fontSize": "1.5vh"
                         }
                       },
                       "children": "Character 1"
@@ -614,7 +607,7 @@
                       "props": {
                         "variant": "blurry"
                       },
-                      "onClick": "const t = game.data.GridControls.tokens[0]; if (t.row > 0) { game.data.GridControls.tokens[0] = { col: t.col, row: t.row - 1 }; chatLog('moved Character 1 up') }",
+                      "onClick": "game.data.GridControls.char0row = (game.data.GridControls.char0row || 0) - (game.data.GridControls.char0row > 0 ? 1 : 0); chatLog('moved character 1 up')",
                       "children": "\u25b2"
                     },
                     {
@@ -631,7 +624,7 @@
                           "props": {
                             "variant": "blurry"
                           },
-                          "onClick": "const t = game.data.GridControls.tokens[0]; if (t.col > 0) { game.data.GridControls.tokens[0] = { col: t.col - 1, row: t.row }; chatLog('moved Character 1 left') }",
+                          "onClick": "game.data.GridControls.char0col = (game.data.GridControls.char0col || 0) - (game.data.GridControls.char0col > 0 ? 1 : 0); chatLog('moved character 1 left')",
                           "children": "\u25c0"
                         },
                         {
@@ -639,7 +632,7 @@
                           "props": {
                             "variant": "blurry"
                           },
-                          "onClick": "const t = game.data.GridControls.tokens[0]; if (t.col < 6) { game.data.GridControls.tokens[0] = { col: t.col + 1, row: t.row }; chatLog('moved Character 1 right') }",
+                          "onClick": "game.data.GridControls.char0col = (game.data.GridControls.char0col || 0) + (game.data.GridControls.char0col < 6 ? 1 : 0); chatLog('moved character 1 right')",
                           "children": "\u25b6"
                         }
                       ]
@@ -649,7 +642,7 @@
                       "props": {
                         "variant": "blurry"
                       },
-                      "onClick": "const t = game.data.GridControls.tokens[0]; if (t.row < 1) { game.data.GridControls.tokens[0] = { col: t.col, row: t.row + 1 }; chatLog('moved Character 1 down') }",
+                      "onClick": "game.data.GridControls.char0row = (game.data.GridControls.char0row || 0) + (game.data.GridControls.char0row < 1 ? 1 : 0); chatLog('moved character 1 down')",
                       "children": "\u25bc"
                     }
                   ]
@@ -668,8 +661,7 @@
                       "props": {
                         "className": "text-white",
                         "style": {
-                          "fontSize": "1.5vh",
-                          "marginBottom": "0.5vh"
+                          "fontSize": "1.5vh"
                         }
                       },
                       "children": "Character 2"
@@ -679,7 +671,7 @@
                       "props": {
                         "variant": "blurry"
                       },
-                      "onClick": "const t = game.data.GridControls.tokens[1]; if (t.row > 0) { game.data.GridControls.tokens[1] = { col: t.col, row: t.row - 1 }; chatLog('moved Character 2 up') }",
+                      "onClick": "game.data.GridControls.char1row = (game.data.GridControls.char1row || 0) - (game.data.GridControls.char1row > 0 ? 1 : 0); chatLog('moved character 2 up')",
                       "children": "\u25b2"
                     },
                     {
@@ -696,7 +688,7 @@
                           "props": {
                             "variant": "blurry"
                           },
-                          "onClick": "const t = game.data.GridControls.tokens[1]; if (t.col > 0) { game.data.GridControls.tokens[1] = { col: t.col - 1, row: t.row }; chatLog('moved Character 2 left') }",
+                          "onClick": "game.data.GridControls.char1col = (game.data.GridControls.char1col || 0) - (game.data.GridControls.char1col > 0 ? 1 : 0); chatLog('moved character 2 left')",
                           "children": "\u25c0"
                         },
                         {
@@ -704,7 +696,7 @@
                           "props": {
                             "variant": "blurry"
                           },
-                          "onClick": "const t = game.data.GridControls.tokens[1]; if (t.col < 6) { game.data.GridControls.tokens[1] = { col: t.col + 1, row: t.row }; chatLog('moved Character 2 right') }",
+                          "onClick": "game.data.GridControls.char1col = (game.data.GridControls.char1col || 0) + (game.data.GridControls.char1col < 6 ? 1 : 0); chatLog('moved character 2 right')",
                           "children": "\u25b6"
                         }
                       ]
@@ -714,7 +706,7 @@
                       "props": {
                         "variant": "blurry"
                       },
-                      "onClick": "const t = game.data.GridControls.tokens[1]; if (t.row < 1) { game.data.GridControls.tokens[1] = { col: t.col, row: t.row + 1 }; chatLog('moved Character 2 down') }",
+                      "onClick": "game.data.GridControls.char1row = (game.data.GridControls.char1row || 0) + (game.data.GridControls.char1row < 1 ? 1 : 0); chatLog('moved character 2 down')",
                       "children": "\u25bc"
                     }
                   ]
@@ -722,21 +714,15 @@
               ]
             },
             "defaultValue": {
-              "tokens": [
-                {
-                  "col": 2,
-                  "row": 1
-                },
-                {
-                  "col": 4,
-                  "row": 1
-                }
-              ]
+              "char0col": 2,
+              "char0row": 1,
+              "char1col": 4,
+              "char1row": 1
             },
             "events": {
-              "onUpdate": "game.data.Grid.tokens[0] = game.data.GridControls.tokens[0]; game.data.Grid.tokens[1] = game.data.GridControls.tokens[1];",
-              "onOpponentUpdate": "game.data.Grid.tokens[0] = opponentGame.data.GridControls.tokens[0]; game.data.Grid.tokens[1] = opponentGame.data.GridControls.tokens[1];",
-              "onStart": "game.data.GridControls.tokens = [{ col: 2, row: 1 }, { col: 4, row: 1 }]"
+              "onUpdate": "game.data.Grid.char0col = game.data.GridControls.char0col; game.data.Grid.char0row = game.data.GridControls.char0row; game.data.Grid.char1col = game.data.GridControls.char1col; game.data.Grid.char1row = game.data.GridControls.char1row;",
+              "onOpponentUpdate": "game.data.Grid.char0col = opponentGame.data.GridControls.char0col; game.data.Grid.char0row = opponentGame.data.GridControls.char0row; game.data.Grid.char1col = opponentGame.data.GridControls.char1col; game.data.Grid.char1row = opponentGame.data.GridControls.char1row;",
+              "onStart": "game.data.GridControls.char0col = 2; game.data.GridControls.char0row = 1; game.data.GridControls.char1col = 4; game.data.GridControls.char1row = 1;"
             }
           },
           "SharedDeck": {

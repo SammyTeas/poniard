@@ -72,6 +72,7 @@
           "Sub_Ruler",
           "Expel",
           "Grid",
+          "GridControls",
           "SharedDeck",
           "Market"
         ],
@@ -80,6 +81,9 @@
           "content": [
             {
               "section": "Grid"
+            },
+            {
+              "section": "GridControls"
             },
             {
               "direction": "row",
@@ -367,32 +371,6 @@
             "keepTappedNewTurn": false,
             "showHiddenCardInHistory": false
           },
-          "SharedDeck": {
-            "title": "SharedDeck",
-            "isHidden": "yes",
-            "height": "SMALL",
-            "alignment": "DECK",
-            "isShared": true,
-            "displayedTitle": "Shared Deck",
-            "noAutoPayTo": true,
-            "isHorizontalAllowed": false,
-            "noQuickActions": false,
-            "keepTappedNewTurn": false,
-            "showHiddenCardInHistory": false
-          },
-          "Market": {
-            "title": "Market",
-            "isHidden": "no",
-            "height": "SMALL",
-            "alignment": "CENTER",
-            "isShared": true,
-            "displayedTitle": "Market",
-            "noAutoPayTo": true,
-            "isHorizontalAllowed": true,
-            "noQuickActions": false,
-            "keepTappedNewTurn": false,
-            "showHiddenCardInHistory": true
-          },
           "Grid": {
             "type": "custom",
             "isShared": true,
@@ -402,9 +380,7 @@
                 "className": "position-fixed top-50 start-0 w-100 d-flex justify-content-center align-items-center",
                 "style": {
                   "translate": "0 -50%",
-                  "marginLeft": "var(--left-offset-centered)",
-                  "flexDirection": "column",
-                  "gap": "1vh"
+                  "marginLeft": "var(--left-offset-centered)"
                 }
               },
               "children": [
@@ -579,147 +555,6 @@
                       }
                     }
                   ]
-                },
-                {
-                  "type": "div",
-                  "props": {
-                    "className": "d-flex",
-                    "style": {
-                      "gap": "4vh"
-                    }
-                  },
-                  "children": [
-                    {
-                      "type": "div",
-                      "props": {
-                        "className": "d-flex flex-column align-items-center",
-                        "style": {
-                          "gap": "0.5vh"
-                        }
-                      },
-                      "children": [
-                        {
-                          "type": "div",
-                          "props": {
-                            "className": "text-white",
-                            "style": {
-                              "fontSize": "1.5vh",
-                              "marginBottom": "0.5vh"
-                            }
-                          },
-                          "children": "Character 1"
-                        },
-                        {
-                          "type": "button",
-                          "props": {
-                            "variant": "blurry"
-                          },
-                          "onClick": "const t = game.data.Grid.tokens[0]; if (t.row > 0) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 0 ? { col: tok.col, row: tok.row - 1 } : tok); chatLog('moved character 0 up') }",
-                          "children": "\u25b2"
-                        },
-                        {
-                          "type": "div",
-                          "props": {
-                            "className": "d-flex",
-                            "style": {
-                              "gap": "0.5vh"
-                            }
-                          },
-                          "children": [
-                            {
-                              "type": "button",
-                              "props": {
-                                "variant": "blurry"
-                              },
-                              "onClick": "const t = game.data.Grid.tokens[0]; if (t.col > 0) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 0 ? { col: tok.col - 1, row: tok.row } : tok); chatLog('moved character 0 left') }",
-                              "children": "\u25c0"
-                            },
-                            {
-                              "type": "button",
-                              "props": {
-                                "variant": "blurry"
-                              },
-                              "onClick": "const t = game.data.Grid.tokens[0]; if (t.col < 6) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 0 ? { col: tok.col + 1, row: tok.row } : tok); chatLog('moved character 0 right') }",
-                              "children": "\u25b6"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "button",
-                          "props": {
-                            "variant": "blurry"
-                          },
-                          "onClick": "const t = game.data.Grid.tokens[0]; if (t.row < 1) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 0 ? { col: tok.col, row: tok.row + 1 } : tok); chatLog('moved character 0 down') }",
-                          "children": "\u25bc"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "props": {
-                        "className": "d-flex flex-column align-items-center",
-                        "style": {
-                          "gap": "0.5vh"
-                        }
-                      },
-                      "children": [
-                        {
-                          "type": "div",
-                          "props": {
-                            "className": "text-white",
-                            "style": {
-                              "fontSize": "1.5vh",
-                              "marginBottom": "0.5vh"
-                            }
-                          },
-                          "children": "Character 2"
-                        },
-                        {
-                          "type": "button",
-                          "props": {
-                            "variant": "blurry"
-                          },
-                          "onClick": "const t = game.data.Grid.tokens[1]; if (t.row > 0) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 1 ? { col: tok.col, row: tok.row - 1 } : tok); chatLog('moved character 1 up') }",
-                          "children": "\u25b2"
-                        },
-                        {
-                          "type": "div",
-                          "props": {
-                            "className": "d-flex",
-                            "style": {
-                              "gap": "0.5vh"
-                            }
-                          },
-                          "children": [
-                            {
-                              "type": "button",
-                              "props": {
-                                "variant": "blurry"
-                              },
-                              "onClick": "const t = game.data.Grid.tokens[1]; if (t.col > 0) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 1 ? { col: tok.col - 1, row: tok.row } : tok); chatLog('moved character 1 left') }",
-                              "children": "\u25c0"
-                            },
-                            {
-                              "type": "button",
-                              "props": {
-                                "variant": "blurry"
-                              },
-                              "onClick": "const t = game.data.Grid.tokens[1]; if (t.col < 6) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 1 ? { col: tok.col + 1, row: tok.row } : tok); chatLog('moved character 1 right') }",
-                              "children": "\u25b6"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "button",
-                          "props": {
-                            "variant": "blurry"
-                          },
-                          "onClick": "const t = game.data.Grid.tokens[1]; if (t.row < 1) { game.data.Grid.tokens = game.data.Grid.tokens.map((tok, idx) => idx === 1 ? { col: tok.col, row: tok.row + 1 } : tok); chatLog('moved character 1 down') }",
-                          "children": "\u25bc"
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             },
@@ -738,6 +573,197 @@
             "events": {
               "onStart": "game.data.Grid.tokens = [{ col: 2, row: 1 }, { col: 4, row: 1 }]"
             }
+          },
+          "GridControls": {
+            "type": "custom",
+            "playerRenderOnly": true,
+            "blueprint": {
+              "type": "div",
+              "props": {
+                "className": "position-fixed d-flex justify-content-center align-items-center",
+                "style": {
+                  "bottom": "2vh",
+                  "left": "50%",
+                  "translate": "-50% 0",
+                  "gap": "4vh"
+                }
+              },
+              "children": [
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "d-flex flex-column align-items-center",
+                    "style": {
+                      "gap": "0.5vh"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "text-white",
+                        "style": {
+                          "fontSize": "1.5vh",
+                          "marginBottom": "0.5vh"
+                        }
+                      },
+                      "children": "Character 1"
+                    },
+                    {
+                      "type": "button",
+                      "props": {
+                        "variant": "blurry"
+                      },
+                      "onClick": "const t = game.data.GridControls.tokens[0]; if (t.row > 0) { game.data.GridControls.tokens[0] = { col: t.col, row: t.row - 1 }; chatLog('moved Character 1 up') }",
+                      "children": "\u25b2"
+                    },
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "d-flex",
+                        "style": {
+                          "gap": "0.5vh"
+                        }
+                      },
+                      "children": [
+                        {
+                          "type": "button",
+                          "props": {
+                            "variant": "blurry"
+                          },
+                          "onClick": "const t = game.data.GridControls.tokens[0]; if (t.col > 0) { game.data.GridControls.tokens[0] = { col: t.col - 1, row: t.row }; chatLog('moved Character 1 left') }",
+                          "children": "\u25c0"
+                        },
+                        {
+                          "type": "button",
+                          "props": {
+                            "variant": "blurry"
+                          },
+                          "onClick": "const t = game.data.GridControls.tokens[0]; if (t.col < 6) { game.data.GridControls.tokens[0] = { col: t.col + 1, row: t.row }; chatLog('moved Character 1 right') }",
+                          "children": "\u25b6"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "props": {
+                        "variant": "blurry"
+                      },
+                      "onClick": "const t = game.data.GridControls.tokens[0]; if (t.row < 1) { game.data.GridControls.tokens[0] = { col: t.col, row: t.row + 1 }; chatLog('moved Character 1 down') }",
+                      "children": "\u25bc"
+                    }
+                  ]
+                },
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "d-flex flex-column align-items-center",
+                    "style": {
+                      "gap": "0.5vh"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "text-white",
+                        "style": {
+                          "fontSize": "1.5vh",
+                          "marginBottom": "0.5vh"
+                        }
+                      },
+                      "children": "Character 2"
+                    },
+                    {
+                      "type": "button",
+                      "props": {
+                        "variant": "blurry"
+                      },
+                      "onClick": "const t = game.data.GridControls.tokens[1]; if (t.row > 0) { game.data.GridControls.tokens[1] = { col: t.col, row: t.row - 1 }; chatLog('moved Character 2 up') }",
+                      "children": "\u25b2"
+                    },
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "d-flex",
+                        "style": {
+                          "gap": "0.5vh"
+                        }
+                      },
+                      "children": [
+                        {
+                          "type": "button",
+                          "props": {
+                            "variant": "blurry"
+                          },
+                          "onClick": "const t = game.data.GridControls.tokens[1]; if (t.col > 0) { game.data.GridControls.tokens[1] = { col: t.col - 1, row: t.row }; chatLog('moved Character 2 left') }",
+                          "children": "\u25c0"
+                        },
+                        {
+                          "type": "button",
+                          "props": {
+                            "variant": "blurry"
+                          },
+                          "onClick": "const t = game.data.GridControls.tokens[1]; if (t.col < 6) { game.data.GridControls.tokens[1] = { col: t.col + 1, row: t.row }; chatLog('moved Character 2 right') }",
+                          "children": "\u25b6"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "props": {
+                        "variant": "blurry"
+                      },
+                      "onClick": "const t = game.data.GridControls.tokens[1]; if (t.row < 1) { game.data.GridControls.tokens[1] = { col: t.col, row: t.row + 1 }; chatLog('moved Character 2 down') }",
+                      "children": "\u25bc"
+                    }
+                  ]
+                }
+              ]
+            },
+            "defaultValue": {
+              "tokens": [
+                {
+                  "col": 2,
+                  "row": 1
+                },
+                {
+                  "col": 4,
+                  "row": 1
+                }
+              ]
+            },
+            "events": {
+              "onUpdate": "game.data.Grid.tokens[0] = game.data.GridControls.tokens[0]; game.data.Grid.tokens[1] = game.data.GridControls.tokens[1];",
+              "onOpponentUpdate": "game.data.Grid.tokens[0] = opponentGame.data.GridControls.tokens[0]; game.data.Grid.tokens[1] = opponentGame.data.GridControls.tokens[1];",
+              "onStart": "game.data.GridControls.tokens = [{ col: 2, row: 1 }, { col: 4, row: 1 }]"
+            }
+          },
+          "SharedDeck": {
+            "title": "SharedDeck",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "DECK",
+            "isShared": true,
+            "displayedTitle": "Shared Deck",
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": false,
+            "noQuickActions": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Market": {
+            "title": "Market",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "isShared": true,
+            "displayedTitle": "Market",
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "noQuickActions": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": true
           }
         }
       },
